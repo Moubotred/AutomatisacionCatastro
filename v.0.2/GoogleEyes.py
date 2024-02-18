@@ -1,5 +1,6 @@
 import time
 import os
+import sys
 import subprocess
 import time as tmp
 import platform
@@ -146,14 +147,14 @@ def upload_image_complet(driver, fichero, *Args):# define ,time_half, time,
 
     pass
 
-# service()
+service()
 # profile_path = r'C:\Users\nimun\AppData\Local\Mozilla\Firefox\Profiles\tped0zt5.automata'
-# options=Options()
-# # options.add_argument("--headless")
+options=Options()
+options.add_argument("--headless")
 # # options.add_argument("-profile")
 # options.add_argument(profile_path)
-# driver = webdriver.Firefox()
-# upload_image_complet(driver,'ops.jpeg')
+driver = webdriver.Firefox()
+upload_image_complet(driver,sys.argv[1])
 
 
 
